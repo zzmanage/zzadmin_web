@@ -1,0 +1,75 @@
+/* 通用搜索区域样式 */
+.search-container {
+  background-color: #fafafa;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.search-form .el-form-item {
+  margin-bottom: 0;
+}
+
+/* 通用的搜索按钮样式 */
+.search-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+/* 搜索输入框默认宽度 */
+.search-input {
+  width: 180px !important;
+}
+
+/* 搜索下拉选择器 - 移除固定宽度限制，使其能自适应文本宽度 */
+.search-select {
+  min-width: 120px; /* 设置最小宽度，但允许根据内容扩展 */
+  width: auto !important;
+}
+
+/* 日期范围选择器默认宽度 */
+.search-date-range {
+  width: 300px !important;
+}
+
+/* Element Plus 下拉列表宽度自适应样式 */
+.el-select {
+  /* 移除固定宽度限制 */
+  width: auto;
+}
+
+.el-select .el-input {
+  /* 允许输入框根据内容调整宽度 */
+  width: auto;
+  min-width: 120px;
+}
+
+/* 确保下拉菜单宽度自适应内容 */
+.el-select-dropdown {
+  min-width: max-content !important;
+  /* 防止下拉菜单过宽 */
+  max-width: 500px;
+}
+
+.el-select-dropdown .el-select-dropdown__item {
+  /* 防止文本换行 */
+  white-space: nowrap;
+  padding: 0 20px;
+}
+
+/* 表格中的下拉列表也需要自适应宽度 */
+.el-table .el-select {
+  width: auto !important;
+}
+
+.el-table .el-select .el-input {
+  width: auto !important;
+}

@@ -1,0 +1,213 @@
+/* Dashboard 样式文件 */
+
+/* 加载状态样式 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  background-color: #f5f7fa;
+  border-radius: 4px;
+}
+
+/* 错误提示样式 */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  background-color: #f5f7fa;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+/* 统计卡片样式 */
+.stat-card {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.stat-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #606266;
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #909399;
+  margin: 2px 0 0 0;
+}
+
+/* 颜色类 */
+.text-primary {
+  color: #409eff;
+}
+
+.text-success {
+  color: #67c23a;
+}
+
+.text-danger {
+  color: #f56c6c;
+}
+
+.text-warning {
+  color: #e6a23c;
+}
+
+.text-info {
+  color: #909399;
+}
+
+.text-muted {
+  color: #c0c4cc;
+}
+
+.text-purple {
+  color: #722ed1;
+}
+
+.text-cyan {
+  color: #13c2c2;
+}
+
+/* 图表卡片样式 */
+.chart-card {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chart-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #606266;
+}
+
+.chart-card .card-header .el-button {
+  padding: 4px 8px;
+}
+
+.chart-card .card-header .el-button:hover {
+  color: #409eff;
+}
+
+/* 系统资源监控样式 */
+.resource-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.resource-label {
+  font-size: 12px;
+  color: #606266;
+  width: 32px;
+  flex-shrink: 0;
+}
+
+.resource-progress {
+  flex: 1;
+  height: 8px;
+  background-color: #ebeef5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.resource-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.resource-success {
+  background-color: #67c23a;
+}
+
+.resource-warning {
+  background-color: #e6a23c;
+}
+
+.resource-danger {
+  background-color: #f56c6c;
+}
+
+.resource-value {
+  font-size: 12px;
+  color: #606266;
+  width: 40px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+  .el-row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .el-col {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: 16px;
+  }
+  
+  .stat-value {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .el-container {
+    padding: 10px !important;
+  }
+  
+  .stat-card,
+  .chart-card {
+    margin-bottom: 16px;
+  }
+  
+  .chart-card .card-body {
+    padding: 10px;
+  }
+}
